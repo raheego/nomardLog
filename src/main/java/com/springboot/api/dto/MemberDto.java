@@ -36,4 +36,4 @@ public class MemberDto {
                 ", organization='" + organization + '\'' +
                 '}';
     }
-}
+}//
