@@ -1,0 +1,82 @@
+//우선순위로 쿼리작성해봄
+// 테이블 및 컬럼명은 임의로 지정함
+// 회원, 게시판, 댓글, 태그
+// varchar 지정안함. 추후 가변길이니까 크게 지정해도 상관 없음.
+
+CREATE TABLE `member` (
+	`member_code`	varchar	NOT NULL,
+	`id`	varchar	NOT NULL,
+	`password`	varchar	NOT NULL,
+	`nickname`	varchar	NOT NULL,
+	`email`	varchar	NOT NULL,
+	`gender`	int	NOT NULL,
+	`age`	int	NOT NULL
+);
+
+CREATE TABLE `bbs` (
+	`bbs_id`	int	NOT NULL	COMMENT 'AUTO_INCREMENT',
+	`title`	varchar	NOT NULL,
+	`contents`	varchar	NOT NULL,
+	`created_at`	date	NOT NULL	DEFAULT now(),
+	`modify_at`	datetime	NOT NULL	DEFAULT now(),
+	`view_cnt`	int	NULL,
+	`like`	int	NULL,
+	`tag_id`	varchar	NULL,
+	`is_deleted`	bit	NOT NULL	DEFAULT 0,
+	`member_code`	varchar	NOT NULL
+);
+
+CREATE TABLE `comment` (
+	`comment_ id`	int	NOT NULL,
+	`comment_ref`	int	NOT NULL	COMMENT 'id와 별개로 계층형 댓글의 그룹번호',
+	`comment_ref_order`	int	NOT NULL,
+	`comment_step`	int	NOT NULL,
+	`comment_partent_number`	int	NOT NULL,
+	`comment_answer_count`	int	NOT NULL,
+	`comment_contents`	varchar	NOT NULL,
+	`created_at`	datetime	NOT NULL	DEFAULT now(),
+	`modify_at`	datetime	NOT NULL	DEFAULT now(),
+	`like`	int	NULL,
+	`is_deleted`	bit	NULL	DEFAULT 0,
+	`member_code`	varchar	NOT NULL,
+	`bbs_id`	int	NOT NULL	COMMENT 'AUTO_INCREMENT'
+);
+
+CREATE TABLE `hashtag` (
+	`tag_id`	int	NOT NULL,
+	`content`	varchar	NULL
+);
+
+CREATE TABLE `bbs_tag` (
+	`bbs_tag_id`	int	NOT NULL,
+	`tag_id`	int	NOT NULL,
+	`bbs_id`	int	NOT NULL	COMMENT 'AUTO_INCREMENT'
+);
+
+ALTER TABLE `member` ADD CONSTRAINT `PK_MEMBER` PRIMARY KEY (
+	`member_code`
+);
+
+ALTER TABLE `bbs` ADD CONSTRAINT `PK_BBS` PRIMARY KEY (
+	`bbs_id`
+);
+
+ALTER TABLE `comment` ADD CONSTRAINT `PK_COMMENT` PRIMARY KEY (
+	`comment_ id`
+);
+
+ALTER TABLE `hashtag` ADD CONSTRAINT `PK_HASHTAG` PRIMARY KEY (
+	`tag_id`
+);
+
+ALTER TABLE `bbs_tag` ADD CONSTRAINT `PK_BBS_TAG` PRIMARY KEY (
+	`bbs_tag_id`
+);
+
+
+
+
+//마이페이지 tb 기능 애매함. bbs에 따라 반영되어 비효율적.
+// 댓글+대댓글 테이블 하나로 적용
+// 검색에 걸리도록 bbs_tag 생성
+// 대륙&나라 하나로 관리하는게 어떨까
