@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 생성</title>
+</head>
+<body>
+
+<h1>게시글 생성</h1>
+
+<form action="/create" method="post" th:object="${post}">
+    <label for="content">게시글 내용:</label><br>
+    <textarea id="content" name="content" rows="5" cols="50" th:field="*{content}"></textarea><br><br>
+
+    <label for="hashtags">해시태그 (쉼표로 구분하여 입력):</label><br>
+    <input type="text" id="hashtags" name="hashtags" th:value="${hashtags}" required><br><br>
+    </select><br><br>
+
+    <input type="submit" value="게시">
+</form>
+
+</body>
+</html>
