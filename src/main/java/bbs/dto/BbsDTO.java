@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class BbsDTO { //DTO = 뷰, 컨트롤러, 서비스, DAO 등의 각 계츠으 간 데이터를 주고받는 데 사용되는 객체.
+public class BbsDTO { //DTO = 뷰, 컨트롤러, 서비스, DAO 등의 각 계층 간 데이터를 주고받는 데 사용되는 객체.
 
 	private int bbsId;
 	private int memberCode;
