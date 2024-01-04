@@ -2,6 +2,7 @@ package com.encore.bbs.service;
 
 import com.encore.bbs.dto.Category;
 import com.encore.bbs.dto.Post;
+import com.encore.bbs.dto.Tag;
 import com.encore.bbs.mapper.BbsMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,8 +19,8 @@ public class BbsServiceImpl implements BbsService{
     }
 
     @Override
-    public void saveTag() {
-        bbsMapper.saveTag();
+    public void saveTag(Tag tag) {
+         bbsMapper.saveTag(tag);
     }
 
     @Override
@@ -30,5 +31,10 @@ public class BbsServiceImpl implements BbsService{
     @Override
     public void savePostCateTag(Post post, Category category) {
         bbsMapper.savePostCateTag(post, category);
+    }
+
+    @Override
+    public Tag findById(Long id) {
+        return bbsMapper.findById(id);
     }
 }
