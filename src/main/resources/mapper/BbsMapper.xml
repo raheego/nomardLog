@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "- //mybatis.org//DTO Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.encore.bbs.mapper.BbsMapper">
+    <select id="getCategory" resultType="category">
+        SELECT * FROM CATEGORY;
+    </select>
+
+    <insert id="savePostCateTag" useGeneratedKeys="true" keyProperty="bbsId" parameterType="post">
+        INSERT INTO POST(TITLE, CONTENTS, TAGCONENT) VALUES (#{title}, #{contents}, #{tagcontent});
+    </insert>
+
+    <select id="getPost" resultType="post">
+        SELECT * FROM POST;
+    </select>
+</mapper>
