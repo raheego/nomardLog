@@ -1,4 +1,4 @@
-package com.encore.bbs.controller;
+package com.encore.bbs.controller;  
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 import com.encore.bbs.dto.BbsDTO;
 
 @Controller
-public class BbsController { 
-	
+public class BbsController {
+
 	@Autowired
 	private BbsService bbsService;
 	
