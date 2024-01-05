@@ -5,5 +5,5 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.encore")
-public class BbsApplication {
+public class BoardApplication {
 }
