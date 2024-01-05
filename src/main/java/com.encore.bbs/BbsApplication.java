@@ -5,11 +5,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.encore.bbs.mapper")
 public class BbsApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(BbsApplication.class, args);
-    }
-
+	public static void main(String[] args) { 
+		SpringApplication.run(com.encore.bbs.BbsApplication.class, args);
+		
+	}
 }
