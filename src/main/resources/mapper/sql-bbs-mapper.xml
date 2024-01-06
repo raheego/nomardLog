@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+ <mapper namespace="com.encore.bbs.board.mapper.BbsMapper">
+	<select id="selectBbsDetail" resultType="BbsDTO">
+		SELECT b.bbs_id, b.title, b.contents, b.created_at, b.modify_at, b.view_cnt, b.like_cnt, b.member_code,
+			   ct.continent_name, c.country_name
+		FROM bbs b
+		JOIN countries c ON b.country_id = c.country_id
+		JOIN continents ct ON c.continent_id = ct.continent_id
+		WHERE bbs_id = #{bbsId};
+	</select>
+
+	<select id="getContinentByCountryId" resultType="CountryDto">
+		SELECT continent_name FROM continents ct
+		JOIN countries c ON ct.continent_id = c.continent_id
+		WHERE country_id = #{countryId}
+	</select>
+
+	<select id="getCountryByCountryId" resultType="CountryDto">
+		SELECT country_name FROM countries WHERE country_id = #{countryId}
+	</select>
+
+</mapper>
+<!--	<select id="selectBbsList" resultType="BbsDTO"> &lt;!&ndash; resultMap="BbsList" &ndash;&gt;-->
+<!--		SELECT * FROM bbs-->
+<!--	</select>-->
+<!--	<insert id="insertBbs" parameterType="BbsDTO">-->
+<!--	<![CDATA[-->
+<!--		INSERT INTO bbs -->
+<!--		(-->
+<!--			title,-->
+<!--			contents,-->
+<!--			created_at -->
+<!--		)-->
+<!--		VALUES-->
+<!--		(-->
+<!--			#{title},-->
+<!--			#{contents},-->
+<!--			NOW()-->
+<!--		)-->
+<!--	]]>-->
+<!--	</insert>-->
+<!--	<update id="updateViewCount" parameterType="int">-->
+<!--	 <![CDATA[-->
+<!--	    UPDATE bbs-->
+<!--	    SET view_cnt = view_cnt+1-->
+<!--	    WHERE bbs_id = #{bbsId}-->
+<!--	 ]]>-->
+<!--	</update>	-->
+<!--	<select id="selectBbsDetail" parameterType="int" resultType="com.encore.bbs.dto.BbsDTO">-->
+<!--  	<![CDATA[-->
+<!--	     SELECT bbs_id, -->
+<!--	    		title, -->
+<!--	    		contents, -->
+<!--	    		view_cnt, -->
+<!--	    		DATE_FORMAT(created_at, '%Y.%m.%d %H:%i:%s') -->
+<!--	   		 	as created_at, -->
+<!--	    		member_code-->
+<!--	    	FROM -->
+<!--	    		bbs-->
+<!--	    	WHERE -->
+<!--	    		bbs_id=#{bbsId} AND is_deleted='N'-->
+<!--  	]]>-->
+<!--	</select>-->
+<!--	<update id="updateBbs" parameterType="com.encore.bbs.dto.BbsDTO">-->
+<!--  	<![CDATA[-->
+<!--	    UPDATE bbs SET-->
+<!--	     	title = #{title}, -->
+<!--	    	contents = #{contents},  -->
+<!--	    	modify_at = NOW()-->
+<!--	    WHERE -->
+<!--	    	bbs_id=#{bbsId}-->
+<!--  	]]>-->
+<!--	</update>-->
+<!--	<update id="deleteBbs" parameterType="int">-->
+<!--  	<![CDATA[-->
+<!--	    UPDATE bbs SET-->
+<!--	     	is_deleted = '1', -->
+<!--	    	modify_at = NOW()-->
+<!--	    WHERE -->
+<!--	    	bbs_id=#{bbsId}-->
+<!--  ]]>-->
+<!--</update>-->
+
+<!--	<select id="getCategoryList" resultType="categoryDto">-->
+<!--		SELECT * FROM CATEGORY;-->
+<!--	</select>-->
+
+<!--</mapper>-->

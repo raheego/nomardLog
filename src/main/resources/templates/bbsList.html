@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시물 상세 정보</title>
+</head>
+<body>
+
+<h2>게시물 상세 정보</h2>
+
+<div>
+    <strong>게시글 번호:</strong> <span th:text="${bbsDTO.bbsId}"></span>
+</div>
+<div>
+    <strong>제목:</strong> <span th:text="${bbsDTO.title}"></span>
+</div>
+<div>
+    <strong>내용:</strong> <span th:text="${bbsDTO.contents}"></span>
+</div>
+<div>
+    <strong>작성일:</strong> <span th:text="${bbsDTO.createdAt}"></span>
+</div>
+<div>
+    <strong>수정일:</strong> <span th:text="${bbsDTO.modifyAt}"></span>
+</div>
+<div>
+    <strong>조회수:</strong> <span th:text="${bbsDTO.viewCnt}"></span>
+</div>
+<div>
+    <strong>좋아요수:</strong> <span th:text="${bbsDTO.likeCnt}"></span>
+</div>
+<div>
+    <strong>대륙:</strong> <span th:text="${bbsDTO.continentName}"></span>
+</div>
+<div>
+    <strong>국가:</strong> <span th:text="${bbsDTO.countryName}"></span>
+</div>
+</body>
+</html>
