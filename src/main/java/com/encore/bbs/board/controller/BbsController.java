@@ -7,37 +7,51 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.List;
 
 
 @Controller
-@RequestMapping("/api")
+@RequestMapping("/")
 public class BbsController {
 
     @Autowired
     private BbsService bbsService;
 
+    @GetMapping("/")
+    public String getAllList(Model model) {
+        List<BbsDTO> list = bbsService.getBbsAllList();
+        model.addAttribute("list", list);
+        return "index";
+    }
     @GetMapping("/{bbsId}")
     public String getDetail(@PathVariable("bbsId") int bbsId, Model model) {
-        try {
-            BbsDTO bbsDTO = bbsService.selectBbsDetail(bbsId);
-//            ContinentDto continentDto = bbsService.getContinentByCountryId(bbsDTO.getCountryId());
-//            CountryDto countryDto = bbsService.getCountryByCountryId(bbsDTO.getCountryId());
+        BbsDTO bbsDTO = bbsService.selectBbsDetail(bbsId);
+        model.addAttribute("bbsDTO", bbsDTO);
+        return "bbsList";
+    }
 
-            model.addAttribute("bbsDTO", bbsDTO);
-//            model.addAttribute("continentDto",continentDto);
-//            model.addAttribute("countryDto", countryDto);
+    @GetMapping("/write")
+    public String newForm(Model model) {
+        model.addAttribute("bbsDto", new BbsDTO());
+        return "new_form";
+    }
+    @PostMapping("/write")
+    public String insertBbs(BbsDTO bbsDTO) {
+        bbsService.insertBbs(bbsDTO);
+        return "redirect:/";
+    }
+//    @PostMapping("/write")
+//    public
 
-            return "bbsList";
-        } catch (Exception e) {
-            throw new RuntimeException("게시물 상세 정보를 조회하는 데 문제가 발생했습니다", e);
-        }
 //    @GetMapping("/list") // 전체불러오기
 //    public String showBbsList(Model model) throws Exception{
 //        List<BbsDTO> bbsList = bbsService.selectBbsDetail();
 //        model.addAttribute("bbsList", bbsList);
 //        return "bbsList";
-    }
+//}
 //    @RequestMapping("openBbsList.do")
 //    public ModelAndView openBbsList() throws Exception {
 //        ModelAndView mv = new ModelAndView("bbsList"); // html 경로

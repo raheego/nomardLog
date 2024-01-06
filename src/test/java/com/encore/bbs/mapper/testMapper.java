@@ -9,12 +9,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest
-public class testMapper {
-    @Autowired
-    private BbsMapper bbsMapper;
-    @Autowired
-    private BbsService bbsService;
+//@SpringBootTest
+//public class testMapper {
+//    @Autowired
+//    private BbsMapper bbsMapper;
+//    @Autowired
+//    private BbsService bbsService;
 
 //    @Test
 //    @DisplayName("DB연결 후 조회 테스트")
@@ -38,36 +38,36 @@ public class testMapper {
 //            }, "Expected BindingException was not thrown.");
 //    }
 
-    @Test
-    @DisplayName("대륙 DB연결 후 조회 테스트")
-    public void testContinent(){
-            Long continentId = 1L;
-
-            ContinentDto continentDto = bbsMapper.getContinentByCountryId(continentId);
-            
-            assertNotNull(continentDto);
-            assertEquals(continentId, continentDto.getContinentId());
-        }
-    @Test
-    @DisplayName("매퍼 붙는 테스트")
-    public void testMapping() {
-        Long continentId = 1L;
-
-        assertThrows(Exception.class, () -> {
-            bbsMapper.getContinentByCountryId(continentId);
-            }, "Expected BindingException was not thrown.");
-    }
-
-    @Test
-    @DisplayName("서비스 테스트")
-    public void testService(){
-        Long continentId = 1L;
-
-        ContinentDto resultContinentDto = bbsService.getContinentByCountryId(continentId);
-
-        assertNotNull(resultContinentDto);
-        assertEquals(continentId, resultContinentDto.getContinentId());
-        assertNotNull(resultContinentDto.getContinentName());
-    }
-    }
+//    @Test
+//    @DisplayName("대륙 DB연결 후 조회 테스트")
+//    public void testContinent(){
+//            Long continentId = 1L;
+//
+//            ContinentDto continentDto = bbsMapper.getContinentByCountryId(continentId);
+//
+//            assertNotNull(continentDto);
+//            assertEquals(continentId, continentDto.getContinentId());
+//        }
+//    @Test
+//    @DisplayName("매퍼 붙는 테스트")
+//    public void testMapping() {
+//        Long continentId = 1L;
+//
+//        assertThrows(Exception.class, () -> {
+//            bbsMapper.getContinentByCountryId(continentId);
+//            }, "Expected BindingException was not thrown.");
+//    }
+//
+//    @Test
+//    @DisplayName("서비스 테스트")
+//    public void testService(){
+//        Long continentId = 1L;
+//
+//        ContinentDto resultContinentDto = bbsService.getContinentByCountryId(continentId);
+//
+//        assertNotNull(resultContinentDto);
+//        assertEquals(continentId, resultContinentDto.getContinentId());
+//        assertNotNull(resultContinentDto.getContinentName());
+//    }
+//    }
 

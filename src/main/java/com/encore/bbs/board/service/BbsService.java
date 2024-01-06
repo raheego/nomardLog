@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface BbsService {
 
-    List<BbsDTO> selectBbsList() throws Exception ;
+    List<BbsDTO> getBbsAllList();
 
-    void insertBbs(BbsDTO bbs) throws Exception;
+    void insertBbs(BbsDTO bbsDTO);
 
     BbsDTO selectBbsDetail(int bbsId);
 

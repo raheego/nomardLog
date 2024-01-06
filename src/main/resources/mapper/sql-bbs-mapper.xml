@@ -13,16 +13,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE bbs_id = #{bbsId};
 	</select>
 
-	<select id="getContinentByCountryId" resultType="CountryDto">
-		SELECT continent_name FROM continents ct
-		JOIN countries c ON ct.continent_id = c.continent_id
-		WHERE country_id = #{countryId}
-	</select>
+		<insert id="insertBbs" useGeneratedKeys="true" keyProperty="bbsId" parameterType="BbsDTO">
+			INSERT INTO bbs(title, contents)
+			VALUES (#{title}, #{contents});
+		</insert>
 
-	<select id="getCountryByCountryId" resultType="CountryDto">
-		SELECT country_name FROM countries WHERE country_id = #{countryId}
+	<select id="getBbsAllList" resultType="BbsDto">
+		SELECT title, contents, view_cnt, like_cnt FROM bbs;
 	</select>
-
 </mapper>
 <!--	<select id="selectBbsList" resultType="BbsDTO"> &lt;!&ndash; resultMap="BbsList" &ndash;&gt;-->
 <!--		SELECT * FROM bbs-->

@@ -4,24 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e6b3c77-4916-4bea-9ffc-9ffdbd24c654" name="Changes" comment="Refactor : 폴더 업데이트">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/controller/BbsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/service/BbsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/sql-bbs-mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/encore/bbs/mapper/testMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-01-05__4_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-01-05__4_14__Changes_.xml" afterDir="false" />
+    <list default="true" id="8e6b3c77-4916-4bea-9ffc-9ffdbd24c654" name="Changes" comment="feat : 저장된 대륙/나라 코드 조회(contry_id만 저장)">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/new_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/BoardApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/BoardApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/controller/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/dto/Dto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/dto/BbsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/controller/BbsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/controller/BbsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/mapper/BbsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/mapper/BbsMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/service/BbsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/service/BbsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BbsMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/mapper.bbs/sql-bbs-mapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/bbsList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/encore/bbs/controller/BbsControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/encore/bbs/controller/BbsControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/encore/bbs/service/BbsServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/service/BbsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/service/BbsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/sql-bbs-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/sql-bbs-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/encore/bbs/mapper/testMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/encore/bbs/mapper/testMapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +64,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "user/dongs",
-    "last_opened_file_path": "C:/Users/ldh03/OneDrive/바탕 화면/프로젝트/bbs",
+    "last_opened_file_path": "C:/Users/ldh03/OneDrive/바탕 화면/NomardLogGit/src/main/resources/templates",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -86,6 +78,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ldh03\OneDrive\바탕 화면\NomardLogGit\src\main\resources\templates" />
       <recent name="C:\Users\이동혁\Desktop\NomardLogGit" />
       <recent name="C:\Users\이동혁\Desktop\NomardLogGit\.mvn\wrapper" />
     </key>
@@ -93,6 +86,7 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ldh03\OneDrive\바탕 화면\NomardLogGit\src\main\resources\templates" />
       <recent name="C:\Users\ldh03\OneDrive\바탕 화면\NomardLogGit\src\main\resources\mapper" />
       <recent name="C:\Users\이동혁\Desktop\NomardLogGit" />
     </key>
@@ -267,7 +261,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704437724243</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat : 저장된 대륙/나라 코드 조회(contry_id만 저장)">
+      <option name="closed" value="true" />
+      <created>1704561424634</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704561424634</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,7 +293,8 @@
     <MESSAGE value="add : 테이블 쿼리문" />
     <MESSAGE value="add : dto 추가 생성" />
     <MESSAGE value="Refactor : 폴더 업데이트" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor : 폴더 업데이트" />
+    <MESSAGE value="feat : 저장된 대륙/나라 코드 조회(contry_id만 저장)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : 저장된 대륙/나라 코드 조회(contry_id만 저장)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NomardLogGit$BoardApplication.ic" NAME="BoardApplication Coverage Results" MODIFIED="1704534189798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

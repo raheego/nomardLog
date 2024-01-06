@@ -7,9 +7,9 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface BbsMapper {
-    List<BbsDTO> selectBbsList() throws Exception;
+    List<BbsDTO> getBbsAllList();
 
-    void insertBbs(BbsDTO bbs) throws Exception;
+    void insertBbs(BbsDTO bbsDTO);
 
     BbsDTO selectBbsDetail(int bbsId);
 

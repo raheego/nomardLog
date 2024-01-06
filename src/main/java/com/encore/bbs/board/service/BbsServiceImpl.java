@@ -13,14 +13,15 @@ public class BbsServiceImpl implements BbsService {
     @Autowired
     private BbsMapper bbsmapper;
 
-    @Override
-    public List<BbsDTO> selectBbsList() throws Exception {
-        return bbsmapper.selectBbsList();
 
-    }
     @Override
-    public void insertBbs(BbsDTO bbs) throws Exception {
-        bbsmapper.insertBbs(bbs);
+    public List<BbsDTO> getBbsAllList() {
+        return bbsmapper.getBbsAllList();
+    }
+
+    @Override
+    public void insertBbs(BbsDTO bbsDTO){
+        bbsmapper.insertBbs(bbsDTO);
     }
 
     @Override
