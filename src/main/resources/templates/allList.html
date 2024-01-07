@@ -27,6 +27,8 @@
         </tr>
         </thead>
         <tbody>
+
+
         <tr th:each="list : ${list}">
             <td th:text="${list.bbsId}"/>
             <td th:text="${list.title}"/>
@@ -39,6 +41,7 @@
         </tbody>
     </table>
     <br/><br/>
+    <a href="/write" class="btn">글 쓰기</a>
 </div>   
 </body>
 </html>

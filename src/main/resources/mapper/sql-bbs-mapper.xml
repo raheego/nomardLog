@@ -4,27 +4,42 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
  <mapper namespace="com.encore.bbs.board.mapper.BbsMapper">
+	<!-- 게시글 상세정보 sql-->
 	<select id="selectBbsDetail" resultType="BbsDTO">
-		SELECT b.bbs_id, b.title, b.contents, b.created_at, b.modify_at, b.view_cnt, b.like_cnt, b.member_code,
-			   ct.continent_name, c.country_name
+		SELECT *, ct.continent_name, c.country_name
 		FROM bbs b
 		JOIN countries c ON b.country_id = c.country_id
 		JOIN continents ct ON c.continent_id = ct.continent_id
 		WHERE bbs_id = #{bbsId};
 	</select>
-
+	<!--게시글 저장 sql-->
 		<insert id="insertBbs" useGeneratedKeys="true" keyProperty="bbsId" parameterType="BbsDTO">
 			INSERT INTO bbs(title, contents)
 			VALUES (#{title}, #{contents});
 		</insert>
-
+	<!--게시글 전체 목록-->
 	<select id="getBbsAllList" resultType="BbsDTO">
 		SELECT * FROM bbs;
 	</select>
-
+	<!--MainPage 정보 불러오기-->
 	<select id="getText" resultType="BbsDTO">
 		SELECT title, contents FROM bbs WHERE bbs_id = 1;
 	</select>
+	<!--국가정보 넣기-->
+	<select id="getCountryList" resultType="BbsDTO">
+		SELECT * FROM countries;
+	</select>
+
+	<select id="insertCountryBbs" resultType="BbsDTO">
+		SELECT country_id
+		FROM countries
+		WHERE country_name = #{countryName};
+	</select>
+
+	<insert id="insertHashtag" useGeneratedKeys="true" keyProperty="hashtagId" parameterType="hashTag">
+		INSERT INTO hashtag(contnets)
+		VALUES #{contents};
+	</insert>
 </mapper>
 <!--	<select id="selectBbsList" resultType="BbsDTO"> &lt;!&ndash; resultMap="BbsList" &ndash;&gt;-->
 <!--		SELECT * FROM bbs-->
