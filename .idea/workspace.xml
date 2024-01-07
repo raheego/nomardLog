@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e6b3c77-4916-4bea-9ffc-9ffdbd24c654" name="Changes" comment="feat : 태그 저장 로직 완성 / 노출 미완성" />
+    <list default="true" id="8e6b3c77-4916-4bea-9ffc-9ffdbd24c654" name="Changes" comment="feat : 테이블 생성 SQL 변경" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -267,7 +267,7 @@
       <workItem from="1704525168099" duration="134000" />
       <workItem from="1704525577214" duration="138000" />
       <workItem from="1704568257426" duration="2160000" />
-      <workItem from="1704614628865" duration="36339000" />
+      <workItem from="1704614628865" duration="36727000" />
     </task>
     <task id="LOCAL-00001" summary="add : bbs category 생성 중">
       <option name="closed" value="true" />
@@ -373,7 +373,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704657003012</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="feat : 테이블 생성 SQL 변경">
+      <option name="closed" value="true" />
+      <created>1704657481484</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1704657481484</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +416,8 @@
     <MESSAGE value="feat : MainPage 작업 ing" />
     <MESSAGE value="feat : 국가/태그 저장 로직 확인 중" />
     <MESSAGE value="feat : 태그 저장 로직 완성 / 노출 미완성" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : 태그 저장 로직 완성 / 노출 미완성" />
+    <MESSAGE value="feat : 테이블 생성 SQL 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : 테이블 생성 SQL 변경" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NomardLogGit$BoardApplication.ic" NAME="BoardApplication Coverage Results" MODIFIED="1704534189798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
