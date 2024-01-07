@@ -13,6 +13,7 @@ import java.util.List;
 public class CommentServiceImpl implements CommentService {
 
     private final CommentMapper commentMapper;
+    //추후 게시판 mapper을 추가해야 함. ----------
 
     @Override
     public List<CommentDTO> getCommentsByBbsId(Long bbsId) {
