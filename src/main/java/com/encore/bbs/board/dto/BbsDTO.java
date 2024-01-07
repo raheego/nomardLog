@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 public class BbsDTO {
 
-    private int bbsId;
+    private Long bbsId;
     private int memberCode;
     private String title;
     private String contents;

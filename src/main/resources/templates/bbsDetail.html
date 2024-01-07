@@ -45,8 +45,14 @@
 <!--                    <input type="text" id="title" name="title" th:text="${bbsDTO.title}"/>-->
             </tr>
             <tr>
+                <th scope="row">내용</th>
                 <td colspan="4" class="view_text" th:text="${bbsDTO.contents}" >
 <!--                    <textarea title="내용" id="contents" name="contents" th:text="${bbsDTO.contents}"></textarea>-->
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">태그</th>
+                <td colspan="4" class="view_text" th:text="${hashtag.content}" >
                 </td>
             </tr>
             </tbody>

@@ -3,7 +3,6 @@ package com.encore.bbs.board.service;
 
 import com.encore.bbs.board.dto.BbsDTO;
 import com.encore.bbs.board.dto.HashTag;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -16,7 +15,7 @@ public interface BbsService {
 
     void insertBbs(BbsDTO bbsDTO);
 
-    BbsDTO selectBbsDetail(int bbsId);
+    BbsDTO selectBbsDetail(Long bbsId);
 
     List<BbsDTO> getCountryList();
 
@@ -24,6 +23,12 @@ public interface BbsService {
 
     void insertCountryBbs(BbsDTO bbsDTO);
 
-    void insertHashtag(HashTag hashTag);
+//    void insertHashtag(HashTag hashTag);
+    void insertHashtag(BbsDTO bbsDTO, String content);
 
+    Long getLatestBbsId();
+
+//    BbsDTO selectHashtag(BbsDTO bbsDTO);
+
+    HashTag selectHashtag(BbsDTO bbsDTO, Long bbsId);
 }

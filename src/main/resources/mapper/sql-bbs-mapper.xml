@@ -37,9 +37,20 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 
 	<insert id="insertHashtag" useGeneratedKeys="true" keyProperty="hashtagId" parameterType="hashTag">
-		INSERT INTO hashtag(contnets)
-		VALUES #{contents};
+		INSERT INTO hashtag(bbs_id, content)
+		VALUES (#{bbsId}, #{content});
 	</insert>
+
+	<!-- 최근 저장한 게시물 id-->
+	<select id="getLatestBbsId" parameterType="Long">
+		SELECT LAST_INSERT_ID()
+	</select>
+
+	<!-- 해시태그 게시판 노출-->
+	<select id="selectHashtag" parameterType="hashtag" resultType="hashtag">
+		SELECT *
+		FROM hashtag WHERE bbs_id = #{bbsId};
+	</select>
 </mapper>
 <!--	<select id="selectBbsList" resultType="BbsDTO"> &lt;!&ndash; resultMap="BbsList" &ndash;&gt;-->
 <!--		SELECT * FROM bbs-->

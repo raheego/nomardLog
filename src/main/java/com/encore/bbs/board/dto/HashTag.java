@@ -9,8 +9,10 @@ import lombok.Setter;
 public class HashTag {
     private Long hashtagId;
     private String content;
+    private Long bbsId;
 
-    public HashTag(String content) {
+    public HashTag(String content, Long bbsId) {
         this.content = content;
+        this.bbsId = bbsId;
     }
 }

@@ -20,7 +20,7 @@
         <tr>
             <th scope="col">글번호</th> <!-- 제목열 편집-->
             <th scope="col">제 목</th>
-            <th scope="col" style="max-width: 200px">내 용</th>
+            <th scope="col">내 용</th>
             <th scope="col">조회수</th>
             <th scope="col">좋아요수</th>
             <th scope="col">작성일</th>
@@ -31,8 +31,9 @@
 
         <tr th:each="list : ${list}">
             <td th:text="${list.bbsId}"/>
-            <td th:text="${list.title}"/>
-            <td th:text="${list.contents}"/>
+            <td><a th:href="@{'/' + ${list.bbsId}}" th:text="${list.title}" class="link-text"></a></td>
+            <td><a th:href="@{'/' + ${list.bbsId}}" th:text="${list.contents}" class="link-text"></a></td>
+<!--            <td th:text="${list.contents}"/>-->
             <td th:text="${list.viewCnt}"/>
             <td th:text="${list.likeCnt}"/>
             <td th:text="${#temporals.format(list.createdAt, 'yyyy.MM.dd')}"/>

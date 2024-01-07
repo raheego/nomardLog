@@ -17,10 +17,10 @@ public class BbsController {
     @Autowired
     private BbsService bbsService;
 
-    @GetMapping("/bbsList.html") // 해당 게시글로 이동
+    @GetMapping("/list/{bbsId}") // 해당 게시글로 이동
     public String getDetailBbs(@RequestParam(name = "bbsId") String bbsId, Model model) {
         model.addAttribute("bbsId", bbsId);
-        return "/{bbsId}";
+        return "bbsDetail";
     }
 
     @GetMapping("/list") // 전체 리스트
@@ -31,9 +31,14 @@ public class BbsController {
     }
 
     @GetMapping("/{bbsId}") // 상세 게시글
-    public String getDetail(@PathVariable("bbsId") int bbsId, Model model) {
+    public String getDetail(@PathVariable("bbsId") Long bbsId, HashTag hashTag, Model model) {
         BbsDTO bbsDTO = bbsService.selectBbsDetail(bbsId);
+//        // 해시태그 셀렉문하고 해당 bbsid 찾는 쿼리문 작성 해야함
+//        HashTag selettag = bbsService.selectHashtag(hashTag);
+        bbsService.selectHashtag(bbsDTO, bbsId);
         model.addAttribute("bbsDTO", bbsDTO);
+        model.addAttribute("hashtag", hashTag);
+        // 값을 못 불러오고 있음 확인 하기
         return "bbsDetail";
     }
 
@@ -47,10 +52,9 @@ public class BbsController {
 
     @PostMapping("/write") // 신규 게시글 저장 로직
 //    public String insertBbs(@RequestParam String countryName, BbsDTO bbsDTO) {
-    public String insertBbs(BbsDTO bbsDTO, HashTag hashTag) {
+    public String insertBbs(BbsDTO bbsDTO, @RequestParam String content ) {
 //        bbsService.insertCountryBbs(bbsDTO);
-        bbsService.insertBbs(bbsDTO);
-        bbsService.insertHashtag(hashTag);
+        bbsService.insertHashtag(bbsDTO, content);
         return "redirect:/list";
     }
 
