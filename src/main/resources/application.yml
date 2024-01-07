@@ -1,0 +1,33 @@
+# MariaDB setting
+server:
+  port: 8080
+  
+spring:
+  sql:
+    init:
+      platform: mariadb
+      encoding: UTF-8 
+      mode: always
+      
+  datasource:
+    url: jdbc:mariadb://localhost:3306/nomardlog
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: maria!
+    
+  devtools:
+    livereload:
+      enabled: true
+    
+#thymeleaf auto refresh
+  thymeleaf:
+    cache: false
+
+# mybatis mapping
+# mapper.xml  location
+mybatis:
+  type-aliases-package: com.example.spring.myapp.model
+  mapper-locations: mybatis/mapper/**/*.xml
+  
+
+

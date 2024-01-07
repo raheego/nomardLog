@@ -5,16 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e6b3c77-4916-4bea-9ffc-9ffdbd24c654" name="Changes" comment="Refactor : 폴더 업데이트">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/dto/BbsDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/bbs/BbsApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-01-05__4_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-01-05__4_14__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/comment/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/comment/dto/CommentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/comment/mapper/BaseTimeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/comment/mapper/CommentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/comment/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/comment/service/CommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/BaseTimeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/modify.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/BoardApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/BoardApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/controller/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/dto/Dto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/mapper/BbsMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/service/BbsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/tyhmeleaf.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +48,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -64,8 +83,9 @@
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "user/base",
-    "last_opened_file_path": "C:/Users/이동혁/Desktop/NomardLogGit/src",
+    "git-widget-placeholder": "user/rahee",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/rahee/Desktop/nomardLog/src/main/java/com/encore/bbs/comment/service",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,14 +96,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/encore/bbs/comment/service" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
       <recent name="C:\Users\이동혁\Desktop\NomardLogGit\src" />
-      <recent name="C:\Users\이동혁\Desktop\NomardLogGit" />
-      <recent name="C:\Users\이동혁\Desktop\NomardLogGit\.mvn\wrapper" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="C:\Users\이동혁\Desktop\NomardLogGit" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -93,8 +116,14 @@
       <recent name="com.encore.bbs.service" />
       <recent name="com.encore.bbs.controller" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.encore.bbs.comment.mapper" />
+      <recent name="com.encore.bbs.comment.controller" />
+      <recent name="com.encore.bbs.board.mapper" />
+      <recent name="com.encore.bbs.board.dto" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BbsApplication">
+  <component name="RunManager" selected="JUnit.BbsControllerTest.getList">
     <configuration name="BbsControllerTest.getList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bbs" />
       <extension name="coverage">
@@ -154,6 +183,13 @@
         <item itemvalue="JUnit.BbsServiceImplTest.saveTag" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-f644763e9732-203781b8" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

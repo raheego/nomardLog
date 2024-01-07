@@ -1,0 +1,29 @@
+<!-- ajax로 처리하면 필요xx-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>댓글 수정</title>
+</head>
+<body>
+
+<form action="/comment/update/{commentId}" method="post" th:object="${comment}" autocomplete="off">
+    <div class="comment-edit-area">
+        <h3>댓글 수정</h3>
+
+        <div class="info-area">
+            <span class="nickname" th:text="${comment.writer}">닉네임</span>
+        </div>
+        <textarea class="form-input-text" name="content" th:text="${comment.content}" placeholder="내용을 입력하세요." style="resize:none;"></textarea>
+
+        <input type="hidden" name="commentId" th:value="${comment.commentId}" />
+        <input type="hidden" name="bbsId" th:value="${comment.bbsId}" />
+
+        <div class="btn-area">
+            <input type="submit" value="수정" />
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+<!-- src/main/resources/mapper/BaseEntityMapper.xml -->
+<mapper namespace="com.example.demo.entity.mapper.BaseTimeMapper">
+
+    <insert id="insertBaseEntity" parameterType="com.example.demo.comment.dto.CommentDTO">
+        INSERT INTO comment (createdTime, updatedTime)
+        VALUES (#{createdTime}, #{updatedTime})
+    </insert>
+</mapper>
