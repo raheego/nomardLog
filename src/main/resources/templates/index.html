@@ -4,32 +4,41 @@
 <head>
 <meta charset="utf-8"/>
 <title>Sales Manager Application</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" media="all"/>
 </head>
 <body>
-<div align="center">
-    <h1>상품 리스트 </h1>
-    <a href="/new">상품 등록</a>
-    <br/><br/>
-    <table border="1" cellpadding="10">
+<div class="container">
+    <h1>게시글 목록 </h1>
+    <table class="bbs_list">
+        <colgroup>
+            <col width="15%"/>
+            <col width="*"/>
+            <col width="15%"/>
+            <col width="20%"/>
+        </colgroup>
         <thead>
-            <tr>
-                <th>상품번호</th>
-                <th>상품명</th>
-                <th>수량</th>
-                <th>가격</th>
-                <th>수정/삭제</th>
-            </tr>
+        <tr>
+            <th scope="col">글번호</th> <!-- 제목열 편집-->
+            <th scope="col">제 목</th>
+            <th scope="col" style="max-width: 200px">내 용</th>
+            <th scope="col">조회수</th>
+            <th scope="col">좋아요수</th>
+            <th scope="col">작성일</th>
+        </tr>
         </thead>
         <tbody>
-            <tr th:each="list : ${list}">
-                <td th:text="${list.title}">ID</td>
-                <td th:text="${list.contents}">Item Name</td>
-                <td th:text="${list.viewCnt}">Quantity</td>
-                <td th:text="${list.likeCnt}">Amount</td>
+        <tr th:each="list : ${list}">
+            <td th:text="${list.bbsId}"/>
+            <td th:text="${list.title}"/>
+            <td th:text="${list.contents}"/>
+            <td th:text="${list.viewCnt}"/>
+            <td th:text="${list.likeCnt}"/>
+            <td th:text="${#temporals.format(list.createdAt, 'yyyy.MM.dd')}"/>
 
-            </tr>
+        </tr>
         </tbody>
     </table>
+    <br/><br/>
 </div>   
 </body>
 </html>

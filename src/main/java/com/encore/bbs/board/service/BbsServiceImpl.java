@@ -1,6 +1,7 @@
 package com.encore.bbs.board.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.encore.bbs.board.dto.BbsDTO;
 import com.encore.bbs.board.mapper.BbsMapper;
@@ -18,6 +19,16 @@ public class BbsServiceImpl implements BbsService {
     public List<BbsDTO> getBbsAllList() {
         return bbsmapper.getBbsAllList();
     }
+
+    @Override
+    public BbsDTO getText() {
+        return bbsmapper.getText();
+    }
+
+//    @Override
+//    public List<BbsDTO> getText(int bbsId) {
+//        return bbsmapper.getText();
+//    }
 
     @Override
     public void insertBbs(BbsDTO bbsDTO){

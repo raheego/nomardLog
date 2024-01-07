@@ -18,8 +18,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			VALUES (#{title}, #{contents});
 		</insert>
 
-	<select id="getBbsAllList" resultType="BbsDto">
-		SELECT title, contents, view_cnt, like_cnt FROM bbs;
+	<select id="getBbsAllList" resultType="BbsDTO">
+		SELECT * FROM bbs;
+	</select>
+
+	<select id="getText" resultType="BbsDTO">
+		SELECT title, contents FROM bbs WHERE bbs_id = 1;
 	</select>
 </mapper>
 <!--	<select id="selectBbsList" resultType="BbsDTO"> &lt;!&ndash; resultMap="BbsList" &ndash;&gt;-->
