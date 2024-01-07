@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e6b3c77-4916-4bea-9ffc-9ffdbd24c654" name="Changes" comment="feat : 국가/태그 저장 로직 확인 중">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/controller/BbsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/controller/BbsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/dto/BbsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/dto/BbsDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/dto/HashTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/dto/HashTag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/mapper/BbsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/mapper/BbsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/service/BbsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/service/BbsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/service/BbsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/service/BbsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/sql-bbs-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/sql-bbs-mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/allList.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/allList.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/bbsDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/bbsDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/bbsWrite.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/bbsWrite.html" afterDir="false" />
-    </list>
+    <list default="true" id="8e6b3c77-4916-4bea-9ffc-9ffdbd24c654" name="Changes" comment="feat : 태그 저장 로직 완성 / 노출 미완성" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -280,7 +267,7 @@
       <workItem from="1704525168099" duration="134000" />
       <workItem from="1704525577214" duration="138000" />
       <workItem from="1704568257426" duration="2160000" />
-      <workItem from="1704614628865" duration="35992000" />
+      <workItem from="1704614628865" duration="36339000" />
     </task>
     <task id="LOCAL-00001" summary="add : bbs category 생성 중">
       <option name="closed" value="true" />
@@ -378,7 +365,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704643890234</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat : 태그 저장 로직 완성 / 노출 미완성">
+      <option name="closed" value="true" />
+      <created>1704657003012</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1704657003012</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +384,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -406,7 +407,8 @@
     <MESSAGE value="feat : 게시글 저장,조회" />
     <MESSAGE value="feat : MainPage 작업 ing" />
     <MESSAGE value="feat : 국가/태그 저장 로직 확인 중" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : 국가/태그 저장 로직 확인 중" />
+    <MESSAGE value="feat : 태그 저장 로직 완성 / 노출 미완성" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : 태그 저장 로직 완성 / 노출 미완성" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NomardLogGit$BoardApplication.ic" NAME="BoardApplication Coverage Results" MODIFIED="1704534189798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

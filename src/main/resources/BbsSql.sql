@@ -1,17 +1,5 @@
-CREATE TABLE `category`
-(
-    `continent_id`  INT(11) NOT NULL AUTO_INCREMENT,
-    `continet_name` VARCHAR(50) NOT NULL,
-    `contry_name`   VARCHAR(50) NOT NULL,
-    PRIMARY KEY (`continent_id`) USING BTREE
-)
 
-CREATE TABLE `tag`
-(
-    `tag_id`  INT(11) NOT NULL AUTO_INCREMENT,
-    `content` VARCHAR(50) NOT NULL,
-    PRIMARY KEY (`tag_id`) USING BTREE
-)
+
 -- 대륙 TABLE SQL
 CREATE TABLE `continents` (
                               `continent_Id` INT(11) NOT NULL AUTO_INCREMENT,
@@ -35,7 +23,7 @@ CREATE TABLE `countries` (
 ENGINE=InnoDB
 AUTO_INCREMENT=3
 ;
-
+-- 해시태그 SQL
 CREATE TABLE `hashtag` (
                            `hashtag_id` INT(11) NOT NULL AUTO_INCREMENT,
                            `bbs_id` INT(11) NULL DEFAULT NULL,
@@ -47,4 +35,26 @@ CREATE TABLE `hashtag` (
     COLLATE='utf8mb4_general_ci'
 ENGINE=InnoDB
 AUTO_INCREMENT=12
+;
+
+-- 게시판 SQL
+CREATE TABLE `bbs` (
+                       `bbs_id` INT(11) NOT NULL AUTO_INCREMENT,
+                       `title` VARCHAR(255) NOT NULL COLLATE 'utf8mb4_general_ci',
+                       `contents` VARCHAR(100) NOT NULL COLLATE 'utf8mb4_general_ci',
+                       `created_at` TIMESTAMP NULL DEFAULT current_timestamp(),
+                       `modify_at` TIMESTAMP NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+                       `view_cnt` INT(11) NULL DEFAULT '0',
+                       `like_cnt` INT(11) NULL DEFAULT '0',
+                       `tag_id` INT(11) NULL DEFAULT '0',
+                       `is_deleted` TINYINT(1) NULL DEFAULT '0',
+                       `member_code` INT(11) NULL DEFAULT '0',
+                       `country_id` INT(11) NULL DEFAULT '1',
+                       PRIMARY KEY (`bbs_id`) USING BTREE,
+                       INDEX `country_id` (`country_id`) USING BTREE,
+                       CONSTRAINT `country_id` FOREIGN KEY (`country_id`) REFERENCES `countries` (`country_id`) ON UPDATE CASCADE ON DELETE CASCADE
+)
+    COLLATE='utf8mb4_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=51
 ;
