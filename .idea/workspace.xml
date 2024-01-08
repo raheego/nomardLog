@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e6b3c77-4916-4bea-9ffc-9ffdbd24c654" name="Changes" comment="Refactor : 폴더 업데이트">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-01-05__4_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-01-05__4_14__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/dto/HashTag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/configuration/DBconfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/configuration/DBconfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/controller/BbsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/controller/BbsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/service/BbsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/service/BbsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/dto/BbsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/dto/BbsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/mapper/BbsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/mapper/BbsMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/service/BbsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/service/BbsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/mapper.bbs/sql-bbs-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/mapper.bbs/sql-bbs-mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/encore/bbs/controller/BbsControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/encore/bbs/mapper/testMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/bbs/bbsDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/bbs/bbsDetail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/mapper.bbs/sql-bbs-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/mapper.bbs/sql-bbs-mapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,32 +50,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;user/dongs&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/이동혁/Desktop/NomadLogGit&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "user/dongs",
+    "last_opened_file_path": "C:/Users/이동혁/Desktop/공부/dongbackup",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ldh03\OneDrive\바탕 화면\NomardLogGit\src\main\resources\templates" />
@@ -100,6 +97,9 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.encore.bbs.service" />
       <recent name="com.encore.bbs.controller" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.encore.bbs.dto" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.BbsApplication">
@@ -309,7 +309,7 @@
       <workItem from="1704525577214" duration="138000" />
       <workItem from="1704568257426" duration="2160000" />
       <workItem from="1704614628865" duration="36727000" />
-      <workItem from="1704694413725" duration="4978000" />
+      <workItem from="1704694413725" duration="8215000" />
     </task>
     <task id="LOCAL-00001" summary="add : bbs category 생성 중">
       <option name="closed" value="true" />
@@ -423,7 +423,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704657481484</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Refactor : 폴더 업데이트">
+      <option name="closed" value="true" />
+      <created>1704700008928</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1704700008928</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -452,14 +460,14 @@
     <MESSAGE value="add : bbs controller, mapper, service 신규 작성" />
     <MESSAGE value="add : 테이블 쿼리문" />
     <MESSAGE value="add : dto 추가 생성" />
-    <MESSAGE value="Refactor : 폴더 업데이트" />
     <MESSAGE value="feat : 저장된 대륙/나라 코드 조회(contry_id만 저장)" />
     <MESSAGE value="feat : 게시글 저장,조회" />
     <MESSAGE value="feat : MainPage 작업 ing" />
     <MESSAGE value="feat : 국가/태그 저장 로직 확인 중" />
     <MESSAGE value="feat : 태그 저장 로직 완성 / 노출 미완성" />
     <MESSAGE value="feat : 테이블 생성 SQL 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : 테이블 생성 SQL 변경" />
+    <MESSAGE value="Refactor : 폴더 업데이트" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor : 폴더 업데이트" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NomardLogGit$BoardApplication.ic" NAME="BoardApplication Coverage Results" MODIFIED="1704534189798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

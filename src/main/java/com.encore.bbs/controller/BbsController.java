@@ -42,7 +42,7 @@ public class BbsController {
 		return "redirect:/bbs";
 	}
 
-	@RequestMapping(value= "/bbs/{bbsId}", method=RequestMethod.GET)
+	@RequestMapping(value= "/bbs/{bbsId}", method=RequestMethod.GET) //@GetMapping
 	public ModelAndView openBbsDetail(@PathVariable("bbsId") int bbsId) throws Exception {
 		ModelAndView mv = new ModelAndView("/bbs/bbsDetail");
 		BbsDTO bbs = bbsService.selectBbsDetail(bbsId);

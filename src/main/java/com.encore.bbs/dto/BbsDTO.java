@@ -21,6 +21,10 @@ public class BbsDTO {
 	private int likeCnt;
 	private int tagId;
 	private boolean isDeleted;
+	private Long countryId; // 외래키
+
+	private String continentName;
+	private String countryName;
 	
 	
 }

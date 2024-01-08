@@ -17,5 +17,6 @@ public interface BbsMapper {
 	 void updateBbs(BbsDTO bbs) throws Exception;
 	 
 	 void deleteBbs(int bbsId) throws Exception;
-	
+
+//	Long getLatestBbsId();
 }
