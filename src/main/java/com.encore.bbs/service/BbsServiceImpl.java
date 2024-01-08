@@ -19,7 +19,12 @@ public class BbsServiceImpl implements BbsService {
 	public List<BbsDTO> selectBbsList() throws Exception {
 		return bbsmapper.selectBbsList();
 	}
-		
+
+	@Override
+	public void insertBbs(BbsDTO bbs, MultipartHttpServletRequest multipartHttpServletRequest) throws Exception {
+		bbsmapper.insertBbs(bbs);
+	}
+
 	@Override
 	public BbsDTO selectBbsDetail(int bbsId) throws Exception {
 		BbsDTO bbs = bbsmapper.selectBbsDetail(bbsId);

@@ -28,16 +28,17 @@ public class BbsController {
 		
 		return mv;
 	}
-	
+
 	@RequestMapping(value= "/bbs/write", method=RequestMethod.GET)
 	public String openBbsWrite() throws Exception {
 		return "/bbs/bbsWrite";
 	}
-	
+
 	@RequestMapping(value= "/bbs/write", method=RequestMethod.POST)
 	public String insertBbs(BbsDTO bbs, MultipartHttpServletRequest multipartHttpServletRequest) throws Exception {
 		bbsService.insertBbs(bbs, multipartHttpServletRequest);
-		
+
+
 		return "redirect:/bbs";
 	}
 
@@ -47,7 +48,7 @@ public class BbsController {
 		BbsDTO bbs = bbsService.selectBbsDetail(bbsId);
 		mv.addObject("bbs", bbs);
 		return mv;
-		
+
 	}
 
 	@RequestMapping(value= "/bbs/{bbsId}", method=RequestMethod.PUT)  // 수정요청
@@ -57,10 +58,9 @@ public class BbsController {
 	}
 
 	@RequestMapping(value= "/bbs/{bbsId}", method=RequestMethod.DELETE)  //삭제요청
-	public String deleteBbs(@PathVariable("bbsId") int bbsId) throws Exception { 
-	  bbsService.deleteBbs(bbsId);      //게시글 삭제 
+	public String deleteBbs(@PathVariable("bbsId") int bbsId) throws Exception {
+	  bbsService.deleteBbs(bbsId);      //게시글 삭제
 	  return "redirect:/bbs";  //삭제완료 후 게시판 목록으로
 
 	     }
     }
-	

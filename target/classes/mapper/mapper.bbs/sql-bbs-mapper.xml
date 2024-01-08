@@ -3,35 +3,17 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
- <mapper namespace="bbs.mapper.BbsMapper">
-	<select id="selectBbsList" resultType="bbs.dto.BbsDTO"> <!-- resultMap="BbsList" -->
-		SELECT * FROM bbs
+ <mapper namespace="com.encore.bbs.mapper.BbsMapper">
+	<select id="selectBbsList" resultType="BbsDTO">
+			SELECT * FROM bbs
+			WHERE is_deleted = '0'
+			ORDER BY bbs_id DESC
 	</select>
-	<insert id="insertBbs" parameterType="bbs.dto.BbsDTO">
-	<![CDATA[
-		INSERT INTO bbs 
-		(
-			title,
-			contents,
-			created_at 
-		)
-		VALUES
-		(
-			#{title},
-			#{contents},
-			NOW()
-		)
-	]]>
+	<insert id="insertBbs" parameterType="BbsDTO" useGeneratedKeys="true" keyProperty="bbsId">
+		INSERT INTO bbs(title, contents, created_at)
+		VALUES (#{title},#{contents},NOW())
 	</insert>
-	<update id="updateViewCount" parameterType="int">
-	 <![CDATA[
-	    UPDATE bbs
-	    SET view_cnt = view_cnt+1
-	    WHERE bbs_id = #{bbsId}
-	 ]]>
-	</update>	
-	<select id="selectBbsDetail" parameterType="int" resultType="bbs.dto.BbsDTO">
-  	<![CDATA[
+	<select id="selectBbsDetail" parameterType="int" resultType="BbsDTO">
 	     SELECT bbs_id, 
 	    		title, 
 	    		contents, 
@@ -43,26 +25,28 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	    		bbs
 	    	WHERE 
 	    		bbs_id=#{bbsId} AND is_deleted='N'
-  	]]>
 	</select>
-	<update id="updateBbs" parameterType="bbs.dto.BbsDTO">
-  	<![CDATA[
+
+	<update id="updateViewCount" parameterType="int">
+	    UPDATE bbs
+	    SET view_cnt = view_cnt+1
+	    WHERE bbs_id = #{bbsId}
+	</update>	
+
+	<update id="updateBbs" parameterType="BbsDTO">
 	    UPDATE bbs SET
 	     	title = #{title}, 
 	    	contents = #{contents},  
 	    	modify_at = NOW()
 	    WHERE 
 	    	bbs_id=#{bbsId}
-  	]]>
 	</update>
 	<update id="deleteBbs" parameterType="int">
-  	<![CDATA[
 	    UPDATE bbs SET
 	     	is_deleted = '1', 
 	    	modify_at = NOW()
 	    WHERE 
 	    	bbs_id=#{bbsId}
-  ]]>
 </update>
 
 </mapper> 

@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e6b3c77-4916-4bea-9ffc-9ffdbd24c654" name="Changes" comment="Refactor : 폴더 업데이트" />
+    <list default="true" id="8e6b3c77-4916-4bea-9ffc-9ffdbd24c654" name="Changes" comment="Refactor : 폴더 업데이트">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-01-05__4_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-01-05__4_14__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/configuration/DBconfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/configuration/DBconfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/controller/BbsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/controller/BbsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/service/BbsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/service/BbsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/service/BbsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/service/BbsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/mapper.bbs/sql-bbs-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/mapper.bbs/sql-bbs-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/encore/bbs/controller/BbsControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/encore/bbs/mapper/testMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/mapper.bbs/sql-bbs-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/mapper.bbs/sql-bbs-mapper.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,32 +53,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "user/dongs",
-    "last_opened_file_path": "C:/Users/이동혁/Desktop/NomadLogGit",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;user/dongs&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/이동혁/Desktop/NomadLogGit&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ldh03\OneDrive\바탕 화면\NomardLogGit\src\main\resources\templates" />
@@ -89,7 +102,7 @@
       <recent name="com.encore.bbs.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.boardApplication">
+  <component name="RunManager" selected="Spring Boot.BbsApplication">
     <configuration name="boardApplication" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="MAIN_CLASS_NAME" value="com.encore.bbs.BoardApplication" />
@@ -106,17 +119,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testMapper.testBbsDetail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BbsControllerTest.getList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bbs" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.encore.bbs.mapper.*" />
+          <option name="PATTERN" value="com.encore.bbs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.encore.bbs.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.encore.bbs.mapper.testMapper" />
-      <option name="METHOD_NAME" value="testBbsDetail" />
+      <option name="PACKAGE_NAME" value="com.encore.bbs.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.encore.bbs.BbsControllerTest" />
+      <option name="METHOD_NAME" value="getList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BbsServiceImplTest.saveTag" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bbs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.encore.bbs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.encore.bbs.service" />
+      <option name="MAIN_CLASS_NAME" value="com.encore.bbs.BbsServiceImplTest" />
+      <option name="METHOD_NAME" value="saveTag" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -230,23 +259,35 @@
       <option name="MAIN_CLASS_NAME" value="com.encore.bbs.mapper.testMapper" />
       <option name="METHOD_NAME" value="testService" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BbsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="team01-project" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.encore.bbs.BbsApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="Application.boardApplication" />
+      <item itemvalue="JUnit.testMapper.testBbsDetail" />
+      <item itemvalue="JUnit.BbsControllerTest.getList" />
+      <item itemvalue="JUnit.BbsServiceImplTest.saveTag" />
       <item itemvalue="JUnit.testMapper.testContinent" />
       <item itemvalue="JUnit.testMapper.testService" />
-      <item itemvalue="JUnit.testMapper.testBbsDetail" />
       <item itemvalue="JUnit.testMapper.testMapping" />
+      <item itemvalue="Spring Boot.BbsApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BbsServiceImplTest.saveTag" />
+        <item itemvalue="JUnit.BbsControllerTest.getList" />
         <item itemvalue="JUnit.testMapper.testService" />
         <item itemvalue="JUnit.testMapper.testContinent" />
         <item itemvalue="JUnit.testMapper.testMapping" />
-        <item itemvalue="JUnit.testMapper.testBbsDetail" />
       </list>
     </recent_temporary>
   </component>
@@ -268,6 +309,7 @@
       <workItem from="1704525577214" duration="138000" />
       <workItem from="1704568257426" duration="2160000" />
       <workItem from="1704614628865" duration="36727000" />
+      <workItem from="1704694413725" duration="4978000" />
     </task>
     <task id="LOCAL-00001" summary="add : bbs category 생성 중">
       <option name="closed" value="true" />
