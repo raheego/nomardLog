@@ -2,11 +2,14 @@ package com.encore.bbs.controller;
 
 import java.util.List;
 
+import com.encore.bbs.dto.CommentDTO;
+import com.encore.bbs.dto.HashTag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -35,9 +38,8 @@ public class BbsController {
 	}
 
 	@RequestMapping(value= "/bbs/write", method=RequestMethod.POST)
-	public String insertBbs(BbsDTO bbs, MultipartHttpServletRequest multipartHttpServletRequest) throws Exception {
-		bbsService.insertBbs(bbs, multipartHttpServletRequest);
-
+	public String insertBbs(@RequestParam String content, BbsDTO bbs, MultipartHttpServletRequest multipartHttpServletRequest) throws Exception {
+		bbsService.insertBbs(bbs, multipartHttpServletRequest, content);
 
 		return "redirect:/bbs";
 	}
@@ -46,7 +48,11 @@ public class BbsController {
 	public ModelAndView openBbsDetail(@PathVariable("bbsId") int bbsId) throws Exception {
 		ModelAndView mv = new ModelAndView("/bbs/bbsDetail");
 		BbsDTO bbs = bbsService.selectBbsDetail(bbsId);
+		HashTag hashTag = bbsService.selectHashtag(bbs, bbsId); //수정해야함
+		List<CommentDTO> comments = bbsService.getCommentsByBbsId(bbsId); // 댓글조회는 완료
 		mv.addObject("bbs", bbs);
+		mv.addObject("comments", comments);
+
 		return mv;
 
 	}

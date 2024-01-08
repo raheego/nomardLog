@@ -7,11 +7,11 @@ import lombok.Setter;
 @Getter @Setter
 @NoArgsConstructor
 public class HashTag {
-    private Long hashtagId;
+    private int hashtagId;
     private String content;
-    private Long bbsId;
+    private int bbsId;
 
-    public HashTag(String content, Long bbsId) {
+    public HashTag(String content, int bbsId) {
         this.content = content;
         this.bbsId = bbsId;
     }

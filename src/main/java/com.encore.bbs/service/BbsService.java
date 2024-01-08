@@ -2,6 +2,8 @@ package com.encore.bbs.service;
 
 import java.util.List;
 import com.encore.bbs.dto.BbsDTO;
+import com.encore.bbs.dto.CommentDTO;
+import com.encore.bbs.dto.HashTag;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 
@@ -9,7 +11,7 @@ public interface BbsService {
 	
 	 List<BbsDTO> selectBbsList() throws Exception ;
 	 
-	 void insertBbs(BbsDTO bbs, MultipartHttpServletRequest multipartHttpServletRequest) throws Exception;
+	 void insertBbs(BbsDTO bbs, MultipartHttpServletRequest multipartHttpServletRequest, String content) throws Exception;
 	 
 	 BbsDTO selectBbsDetail(int bbsId) throws Exception;
 	 
@@ -17,6 +19,13 @@ public interface BbsService {
 	 
 	 void deleteBbs(int bbsId) throws Exception;
 
+	int getLatestBbsId() throws Exception;
+
+	BbsDTO getText() throws Exception;
+
+    HashTag selectHashtag(BbsDTO bbsDTO, int bbsId) throws Exception;
+
+	List<CommentDTO> getCommentsByBbsId(int bbsId) throws Exception;
 
 
 }
