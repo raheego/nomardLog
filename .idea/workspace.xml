@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e6b3c77-4916-4bea-9ffc-9ffdbd24c654" name="Changes" comment="feat : sql 확인용 메모장">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/controller/MainPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/dto/CommentDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/BbsSql.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper 연동위한 테스트.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/bbs/bbsEdit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/bbs/mainpage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/controller/BbsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/controller/BbsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/dto/HashTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/dto/HashTag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/mapper/BbsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/mapper/BbsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/service/BbsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/service/BbsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/service/BbsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com.encore.bbs/service/BbsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/mapper.bbs/sql-bbs-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/mapper.bbs/sql-bbs-mapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/bbs/bbsDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/bbs/bbsDetail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/bbs/bbsWrite.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/bbs/bbsWrite.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/mapper.bbs/sql-bbs-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/mapper.bbs/sql-bbs-mapper.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8e6b3c77-4916-4bea-9ffc-9ffdbd24c654" name="Changes" comment="add: 댓글 테스트" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -296,7 +277,7 @@
       <workItem from="1704694413725" duration="8215000" />
       <workItem from="1704657525734" duration="69000" />
       <workItem from="1704723723406" duration="173000" />
-      <workItem from="1704723912841" duration="6081000" />
+      <workItem from="1704723912841" duration="6406000" />
     </task>
     <task id="LOCAL-00001" summary="add : bbs category 생성 중">
       <option name="closed" value="true" />
@@ -418,7 +399,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704657574889</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add: 댓글 테스트">
+      <option name="closed" value="true" />
+      <created>1704730313680</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1704730313680</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,7 +444,8 @@
     <MESSAGE value="feat : 테이블 생성 SQL 변경" />
     <MESSAGE value="Refactor : 폴더 업데이트" />
     <MESSAGE value="feat : sql 확인용 메모장" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : sql 확인용 메모장" />
+    <MESSAGE value="add: 댓글 테스트" />
+    <option name="LAST_COMMIT_MESSAGE" value="add: 댓글 테스트" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NomardLogGit$BoardApplication.ic" NAME="BoardApplication Coverage Results" MODIFIED="1704534189798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
