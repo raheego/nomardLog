@@ -1,6 +1,9 @@
 package com.encore.bbs.mapper;
 
 import java.util.List;
+
+import com.encore.bbs.dto.CommentDTO;
+import com.encore.bbs.dto.HashTag;
 import org.apache.ibatis.annotations.Mapper;
 import com.encore.bbs.dto.BbsDTO;
 
@@ -17,5 +20,14 @@ public interface BbsMapper {
 	 void updateBbs(BbsDTO bbs) throws Exception;
 	 
 	 void deleteBbs(int bbsId) throws Exception;
-	
+
+	int getLatestBbsId();
+
+	void insertHashtag(HashTag hashTag);
+
+	BbsDTO getText();
+
+	HashTag selectHashtag(HashTag hashTag);
+
+	List<CommentDTO> getCommentsByBbsId(int bbsId) throws Exception;
 }
