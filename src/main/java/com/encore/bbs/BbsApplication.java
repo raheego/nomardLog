@@ -6,11 +6,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 /*@MapperScan("com.encore.bbs")*/
-public class BbsApplication { 
+public class BbsApplication {
 
-	public static void main(String[] args) { 
+	public static void main(String[] args) {
 		SpringApplication.run(BbsApplication.class, args);
-		
+
 	}
-	
+
 }
