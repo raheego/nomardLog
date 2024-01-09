@@ -1,0 +1,102 @@
+DROP DATABASE IF EXISTS travel_blog;
+CREATE DATABASE travel_blog;
+USE travel_blog;
+
+DROP TABLE IF EXISTS usersTBL;
+CREATE TABLE usersTBL
+(
+    memCode INT NOT NULL PRIMARY KEY,
+    memID VARCHAR(15) NOT NULL,
+    memPW VARCHAR(15) NOT NULL,
+    memName VARCHAR(10) NOT NULL,
+    memEmail VARCHAR(30) NOT NULL,
+    memAge INT NOT NULL,
+    memGender VARCHAR(10) NOT NULL CHECK (memGender IN ('남자', '여자'))
+);
+
+DROP TABLE IF EXISTS countryTBL;
+CREATE TABLE countryTBL
+(
+    countryCode INT NOT NULL PRIMARY KEY,
+    countryName VARCHAR(15) NOT NULL
+);
+
+DROP TABLE IF EXISTS postTBL;
+CREATE TABLE postTBL
+(
+    postCode INT NOT NULL PRIMARY KEY,
+    memCode INT NOT NULL,
+    postName VARCHAR(15) NOT NULL,
+    postContent VARCHAR(255) NOT NULL,
+    postPicture VARCHAR(255),
+    postDate DATE NOT NULL,
+    postViews INT NOT NULL,
+    postLikes INT NOT NULL,
+    postTraveldate DATE NOT NULL,
+    countryCode INT NOT NULL,
+    CONSTRAINT FK_usersTBL_postTBL FOREIGN KEY(memCode) REFERENCES usersTBL(memCode),
+    CONSTRAINT FK_countryTBL_postTBL FOREIGN KEY(countryCode) REFERENCES countryTBL(countryCode)
+);
+
+DROP TABLE IF EXISTS commentTBL;
+CREATE TABLE commentTBL
+(
+    commentCode INT NOT NULL PRIMARY KEY,
+    memCode INT NOT NULL,
+    postCode INT NOT NULL,
+    commentPost VARCHAR(255) NOT NULL,
+    commentDate DATE NOT NULL,
+    commentLikes INT NOT NULL,
+    commentPictures VARCHAR(255),
+    
+	 CONSTRAINT FK_usersTBL_commentTBL FOREIGN KEY(memCode) REFERENCES usersTBL(memCode),
+    CONSTRAINT FK_postTBL_commentTBL FOREIGN KEY(postCode) REFERENCES postTBL(postCode)
+);
+
+DROP TABLE IF EXISTS recommentTBL;
+CREATE TABLE recommentTBL
+(
+    recommentCode INT NOT NULL PRIMARY KEY,
+    commentCode INT NOT NULL,
+	 memCode INT NOT NULL,
+    recommentPost VARCHAR(255) NOT NULL,
+    recommentDate DATE NOT NULL,
+    recommentLikes INT,
+   
+	 CONSTRAINT FK_usersTBL_recommentTBL FOREIGN KEY(memCode) REFERENCES usersTBL(memCode),
+    CONSTRAINT FK_commentTBL_recommentTBL FOREIGN KEY(commentCode) REFERENCES commentTBL(commentCode)
+);
+
+DROP TABLE IF EXISTS chatTBL;
+CREATE TABLE chatTBL
+(
+    chatCode INT NOT NULL PRIMARY KEY,
+	 memCode INT NOT NULL,
+    chatContent VARCHAR(255) NOT NULL,
+    chatNum INT NOT NULL,
+    chatRoomNum INT NOT NULL,
+    chatSender INT NOT NULL,
+    ChatRecipient INT NOT NULL,
+    chatTime DATE NOT NULL,
+    chatReadTime DATE NOT NULL,
+    chatCheck DATE NOT NULL,
+   
+	 CONSTRAINT FK_usersTBL_chatTBL FOREIGN KEY(memCode) REFERENCES usersTBL(memCode)
+);
+
+DROP TABLE IF EXISTS mypageTBL;
+CREATE TABLE mypageTBL
+(
+    myCode INT NOT NULL PRIMARY KEY,
+    memCode INT NOT NULL,
+    postCode INT NOT NULL,
+    commentCode INT NOT NULL,
+    recommentCode INT NOT NULL,
+    chatCode INT NOT NULL,
+    
+    CONSTRAINT FK_postTBL_mypageTBL FOREIGN KEY(postCode) REFERENCES postTBL(postCode),
+	 CONSTRAINT FK_usersTBL_mypageTBL FOREIGN KEY(memCode) REFERENCES usersTBL(memCode),
+    CONSTRAINT FK_commentTBL_mypageTBL FOREIGN KEY(commentCode) REFERENCES recommentTBL(commentCode),
+    CONSTRAINT FK_recommentTBL_mypageTBL FOREIGN KEY(recommentCode) REFERENCES recommentTBL(recommentCode),
+    CONSTRAINT FK_chatTBL_mypageTBL FOREIGN KEY(chatCode) REFERENCES chatTBL(chatCode)
+);
