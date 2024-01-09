@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.encore.bbs.mapper")  
+@MapperScan("com.encore.bbs")
 public class BbsApplication { 
 
 	public static void main(String[] args) { 
