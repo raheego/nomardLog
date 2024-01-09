@@ -2,6 +2,7 @@ package com.encore.bbs.service;
 
 import java.util.List;
 import com.encore.bbs.dto.BbsDTO;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 
 public interface BbsService {
