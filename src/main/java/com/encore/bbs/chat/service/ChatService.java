@@ -1,4 +1,4 @@
-package com.encore.bbs.chat;
+package com.encore.bbs.chat.service;
 
 
 

@@ -1,4 +1,4 @@
-package com.encore.bbs.dto;
+package com.encore.bbs.board.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

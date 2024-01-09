@@ -1,11 +1,11 @@
-package com.encore.bbs.controller;
+package com.encore.bbs.board.controller;
 
-import com.encore.bbs.dto.BbsDTO;
+import com.encore.bbs.board.service.BbsService;
+import com.encore.bbs.board.dto.BbsDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import com.encore.bbs.service.BbsService;
 
 @Controller
 public class MainPageController {

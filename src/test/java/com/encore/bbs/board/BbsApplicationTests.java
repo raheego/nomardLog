@@ -1,4 +1,4 @@
-package com.encore.bbs;
+package com.encore.bbs.board;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

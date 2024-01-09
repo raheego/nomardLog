@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8e6b3c77-4916-4bea-9ffc-9ffdbd24c654" name="Changes" comment="add: 댓글 테스트" />
+    <list default="true" id="8e6b3c77-4916-4bea-9ffc-9ffdbd24c654" name="Changes" comment="chat program commit">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-01-05__4_14__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024-01-05__4_14__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/BbsApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/configuration/DBconfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/controller/BbsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/controller/BbsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/controller/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/controller/MainPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/dto/BbsDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/dto/BbsDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/dto/CommentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/dto/CommentDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/dto/HashTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/dto/HashTag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/mapper/BbsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/mapper/BbsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/service/BbsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/service/BbsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com.encore.bbs/service/BbsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/board/service/BbsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/BbsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/BbsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/chat/ChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/chat/service/ChatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/encore/bbs/chat/controller/ChatRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/encore/bbs/chat/controller/ChatRoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/mapper.bbs/sql-bbs-mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/mapper.bbs/sql-bbs-mapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/encore/bbs/BbsApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/encore/bbs/board/BbsApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,16 +71,17 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.BbsApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "user/dongs",
+    "git-widget-placeholder": "user/min",
     "last_opened_file_path": "C:/Users/ldh03/OneDrive/바탕 화면/NomardLogGit/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -233,14 +255,17 @@
       </method>
     </configuration>
     <configuration name="BbsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="team01-project" />
+      <module name="bbs" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.encore.bbs.BbsApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.boardApplication" />
       <item itemvalue="JUnit.testMapper.testContinent" />
       <item itemvalue="JUnit.testMapper.testService" />
       <item itemvalue="JUnit.testMapper.testBbsDetail" />
@@ -445,7 +470,8 @@
     <MESSAGE value="Refactor : 폴더 업데이트" />
     <MESSAGE value="feat : sql 확인용 메모장" />
     <MESSAGE value="add: 댓글 테스트" />
-    <option name="LAST_COMMIT_MESSAGE" value="add: 댓글 테스트" />
+    <MESSAGE value="chat program commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="chat program commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NomardLogGit$BoardApplication.ic" NAME="BoardApplication Coverage Results" MODIFIED="1704534189798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

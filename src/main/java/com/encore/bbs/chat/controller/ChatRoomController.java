@@ -2,8 +2,8 @@ package com.encore.bbs.chat.controller;
 
 
 
-import com.encore.bbs.chat.ChatService;
 import com.encore.bbs.chat.model.ChatRoom;
+import com.encore.bbs.chat.service.ChatService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
