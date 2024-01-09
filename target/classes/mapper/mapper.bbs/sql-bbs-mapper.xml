@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.encore.bbs.mapper.BbsMapper">
+    <select id="selectBbsList" resultType="BbsDTO">
+        SELECT *
+        FROM bbs
+        WHERE is_deleted = '0'
+        ORDER BY bbs_id DESC
+    </select>
+    <insert id="insertBbs" parameterType="BbsDTO" useGeneratedKeys="true" keyProperty="bbsId">
+        INSERT INTO bbs(title, contents, created_at)
+        VALUES (#{title}, #{contents}, NOW())
+    </insert>
+    <insert id="insertHashtag">
+        INSERT INTO hashtag(bbs_id, content)
+        VALUES (#{bbsId}, #{content});
+    </insert>
+    <select id="selectBbsDetail" parameterType="int" resultType="BbsDTO">
+        SELECT *, ct.continent_name, c.country_name
+        FROM bbs b
+                 JOIN countries c ON b.country_id = c.country_id
+                 JOIN continents ct ON c.continent_id = ct.continent_id
+        WHERE bbs_id = #{bbsId};
+    </select>
+
+    <update id="updateViewCount" parameterType="int">
+        UPDATE bbs
+        SET view_cnt = view_cnt + 1
+        WHERE bbs_id = #{bbsId}
+    </update>
+
+    <update id="updateBbs" parameterType="BbsDTO">
+        UPDATE bbs
+        SET title     = #{title},
+            contents  = #{contents},
+            modify_at = NOW()
+        WHERE bbs_id = #{bbsId}
+    </update>
+    <update id="deleteBbs" parameterType="int">
+        UPDATE bbs
+        SET is_deleted = '1',
+            modify_at  = NOW()
+        WHERE bbs_id = #{bbsId}
+    </update>
+
+    <!--MainPage 정보 불러오기-->
+    <select id="getText" resultType="BbsDTO">
+        SELECT title, contents
+        FROM bbs
+        WHERE bbs_id = 1;
+    </select>
+    <select id="getLatestBbsId" resultType="int">
+        SELECT LAST_INSERT_ID();
+    </select>
+    <select id="selectHashtag" resultType="HashTag">
+        SELECT *
+        FROM hashtag WHERE bbs_id = #{bbsId};
+    </select>
+    <!-- 댓글쓰기   -->
+    <insert id="addComment" parameterType="CommentDTO">
+        INSERT INTO comment (bbsId, comment, writer, regDate)
+        VALUES (#{bbsId}, #{content}, #{writer}, now() )
+    </insert>
+    <!--  조회  -->
+    <select id="getCommentsByBbsId" resultType="CommentDTO">
+        SELECT * FROM comment WHERE bbs_id = 51
+    </select>
+
+</mapper> 
